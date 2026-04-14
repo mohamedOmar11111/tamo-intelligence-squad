@@ -1,0 +1,31 @@
+# Onyx Intelligence Squad
+
+### The open-source growth engineering engine.
+
+Onyx is a multi-agent framework designed to automate deep market penetration, semantic sovereignty (G.E.O), and high-velocity content engineering. It transforms your CLI into a mission control for growth.
+
+## Visual Interface
+![Onyx Interface](assets/terminal_preview.svg)
+
+## Installation
+
+### macOS / Linux:
+```bash
+curl -fsSL https://raw.githubusercontent.com/mohamedOmar11111/onyx-intelligence-squad/main/install.sh | bash
+```
+
+## Command Protocols
+
+| Command | Squad | Purpose |
+| :--- | :--- | :--- |
+| `/recon` | **The Scout** | Deep competitor audit and market gap analysis. |
+| `/ghost` | **The Shadow** | SEO to G.E.O transition & AI citable content. |
+| `/vampire` | **The Hunter** | Ad strategy extraction and counter-copy generation. |
+| `/forge` | **The Smith** | 30-day nuclear content calendar engineering. |
+| `/audit` | **The Warden** | Brand voice compliance and linguistic verification. |
+
+## Why Onyx?
+Traditional marketing is an experiment. **Onyx is a system.** By deploying specialized squads that follow strict Markdown-based protocols, you eliminate fluff and execute with algorithmic precision.
+
+---
+Built by [Mohamed Omar](https://github.com/mohamedOmar11111) | Growth Architect.
