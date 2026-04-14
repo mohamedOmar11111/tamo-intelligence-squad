@@ -1,4 +1,4 @@
-# Onyx Protocol: /recon (Market Intelligence)
+# TAMO Protocol: /recon (Market Intelligence)
 
 **Objective:** Execute a deep-penetration market audit to identify competitor vulnerabilities and high-status market gaps.
 

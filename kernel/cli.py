@@ -1,5 +1,12 @@
 import os
 import sys
+
+# Add project root to sys.path
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(script_dir)
+if project_root not in sys.path:
+    sys.path.append(project_root)
+
 from rich.console import Console
 from rich.panel import Panel
 from rich.text import Text
@@ -12,12 +19,12 @@ console = Console()
 
 def get_header():
     ascii_logo = """
- ██████╗ ███╗   ██╗██╗   ██╗██╗  ██╗
-██╔═══██╗████╗  ██║╚██╗ ██╔╝╚██╗██╔╝
-██║   ██║██╔██╗ ██║ ╚████╔╝  ╚███╔╝ 
-██║   ██║██║╚██╗██║  ╚██╔╝   ██╔██╗ 
-╚██████╔╝██║ ╚████║   ██║   ██╔╝ ██╗
- ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝
+ ████████╗ █████╗ ███╗   ███╗ ██████╗ 
+ ╚══██╔══╝██╔══██╗████╗ ████║██╔═══██╗
+    ██║   ███████║██╔████╔██║██║   ██║
+    ██║   ██╔══██║██║╚██╔╝██║██║   ██║
+    ██║   ██║  ██║██║ ╚═╝ ██║╚██████╔╝
+    ╚═╝   ╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ 
     INTELLIGENCE SQUAD v1.0.0
     """
     return Panel(
@@ -30,7 +37,7 @@ def get_session_info():
     table = Table(box=None, show_header=False, padding=(0, 2))
     table.add_row(Text("MODEL", style="dim"), Text("anthropic/claude-3-5-sonnet", style="bold white"))
     table.add_row(Text("DIRECTORY", style="dim"), Text(os.getcwd(), style="bold white"))
-    table.add_row(Text("SYSTEM", style="dim"), Text("ONYX_KERNEL_STABLE", style="bold green"))
+    table.add_row(Text("SYSTEM", style="dim"), Text("TAMO_KERNEL_STABLE", style="bold green"))
     table.add_row(Text("LATENCY", style="dim"), Text("120ms", style="bold yellow"))
     return Panel(table, title="[bold white]Session Status[/]", border_style="dim")
 
@@ -60,7 +67,7 @@ def main_loop():
     console.print("\n[bold cyan]>[/] [white]Ready for mission input...[/]")
 
     # Simulation for demonstration
-    cmd = console.input("[bold cyan]ONYX[/] @ [white]mission_control[/] > ")
+    cmd = console.input("[bold cyan]TAMO[/] @ [white]mission_control[/] > ")
     if cmd.startswith("/recon"):
         console.print("[dim]> initiating_recon_squad: sentinel_active[/]")
         console.print("[dim]> crawling_competitor_data...[/]")
@@ -101,7 +108,7 @@ def export_screenshot():
     os.makedirs(assets_dir, exist_ok=True)
     screenshot_path = os.path.join(assets_dir, "terminal_preview.svg")
     
-    export_console.save_svg(screenshot_path, title="Onyx Intelligence Squad")
+    export_console.save_svg(screenshot_path, title="TAMO Intelligence Squad")
     console.print(f"[bold green]✔[/] Screenshot exported to [bold]{screenshot_path}[/]")
 
 if __name__ == "__main__":
