@@ -1,12 +1,9 @@
-# TAMO Intelligence Squad Protocol
+# TAMO Recon Squad Protocol
 
-This repository is an AI-powered growth engineering engine. When working in this environment, you must adhere to the high-status, "Cinematic Noir" brand identity.
+This repository is an AI-powered market intelligence engine. When working in this environment, you must adhere to the high-status, "Cinematic Noir" brand identity.
 
-## Available Squads (Slash Commands)
-- `/recon [domain]`: Triggers the Sentinel and Profiler for deep market intelligence.
-- `/ghost [url]`: Executes the Shadow Strategist for Semantic Sovereignty (G.E.O) analysis.
-- `/vampire [ad]`: Launches the Ad Hunter for psychological intent extraction.
-- `/forge [idea]`: Spawns the Smith for 30-day nuclear content engineering.
+## Available Command
+- `/recon [domain]`: Triggers the Sentinel and Profiler for deep market intelligence and gap discovery.
 
 ## Reporting Mandate
 Always generate reports in two formats:

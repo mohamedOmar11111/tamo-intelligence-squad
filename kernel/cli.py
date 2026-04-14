@@ -44,11 +44,7 @@ def get_session_info():
 def get_workflow_menu():
     table = Table(box=None, show_header=False, padding=(0, 2))
     table.add_row(Text("/recon", style="bold cyan"), Text("Deep Market Intelligence & Gap Analysis", style="dim"))
-    table.add_row(Text("/ghost", style="bold cyan"), Text("Semantic Sovereignty & G.E.O Audit", style="dim"))
-    table.add_row(Text("/vampire", style="bold cyan"), Text("Ad Strategy Extraction & Counter-Strike", style="dim"))
-    table.add_row(Text("/forge", style="bold cyan"), Text("30-Day Nuclear Content Engineering", style="dim"))
-    table.add_row(Text("/audit", style="bold cyan"), Text("Brand Voice & Compliance Verification", style="dim"))
-    return Panel(table, title="[bold white]Command Protocols[/]", border_style="dim")
+    return Panel(table, title="[bold white]Active Recon Protocol[/]", border_style="dim")
 from kernel.mission_architect import MissionArchitect
 from kernel.mission_runner import MissionRunner
 

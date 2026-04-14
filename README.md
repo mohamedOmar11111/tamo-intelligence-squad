@@ -1,8 +1,8 @@
-# TAMO Intelligence Squad
+# TAMO Recon Squad
 
-### The open-source growth engineering engine.
+### The open-source market intelligence engine.
 
-TAMO is a multi-agent framework designed to automate deep market penetration, semantic sovereignty (G.E.O), and high-velocity content engineering. It transforms your CLI into a mission control for growth.
+TAMO Recon is a multi-agent framework designed to automate deep competitor auditing and market gap discovery. It transforms your CLI into a reconnaissance mission control.
 
 ## Visual Interface
 ![TAMO Interface](assets/terminal_preview.svg)
@@ -26,13 +26,9 @@ irm https://raw.githubusercontent.com/mohamedOmar11111/tamo-intelligence-squad/m
 | Command | Squad | Purpose |
 | :--- | :--- | :--- |
 | `/recon` | **The Scout** | Deep competitor audit and market gap analysis. |
-| `/ghost` | **The Shadow** | SEO to G.E.O transition & AI citable content. |
-| `/vampire` | **The Hunter** | Ad strategy extraction and counter-copy generation. |
-| `/forge` | **The Smith** | 30-day nuclear content calendar engineering. |
-| `/audit` | **The Warden** | Brand voice compliance and linguistic verification. |
 
-## Why TAMO?
-Traditional marketing is an experiment. **TAMO is a system.** By deploying specialized squads that follow strict Markdown-based protocols, you eliminate fluff and execute with algorithmic precision.
+## Why TAMO Recon?
+Traditional market research is slow. **TAMO is surgical.** By deploying specialized agents (**Sentinel, Profiler, Strategist, Inquisitor**) that follow strict protocols, you capture raw market signals with algorithmic precision.
 
 ---
 Built by [Mohamed Omar](https://github.com/mohamedOmar11111) | Growth Architect.
