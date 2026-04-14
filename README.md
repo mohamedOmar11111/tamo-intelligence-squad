@@ -14,6 +14,13 @@ TAMO is a multi-agent framework designed to automate deep market penetration, se
 curl -fsSL https://raw.githubusercontent.com/mohamedOmar11111/tamo-intelligence-squad/main/install.sh | bash
 ```
 
+### Windows (PowerShell):
+```powershell
+irm https://raw.githubusercontent.com/mohamedOmar11111/tamo-intelligence-squad/main/install.ps1 | iex
+```
+
+> **Note:** Installation creates a global `tamo` alias. Restart your terminal after install.
+
 ## Command Protocols
 
 | Command | Squad | Purpose |
