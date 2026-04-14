@@ -8,7 +8,7 @@ echo "------------------------------------------------"
 echo "> Initializing TAMO Kernel..."
 python3 -m venv .venv
 source .venv/bin/activate
-pip install rich requests exa-py firecrawl-py --quiet
+pip install rich requests exa-py firecrawl-py python-dotenv --quiet
 
 # 2. Alias Configuration
 echo "> Injecting TAMO Alias..."

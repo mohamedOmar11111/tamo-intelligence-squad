@@ -8,7 +8,7 @@ Write-Host "------------------------------------------------" -ForegroundColor C
 Write-Host "> Initializing TAMO Kernel..." -ForegroundColor White
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-pip install rich requests exa-py firecrawl-py --quiet
+pip install rich requests exa-py firecrawl-py python-dotenv --quiet
 
 # 2. Alias Configuration (PowerShell Profile)
 Write-Host "> Injecting TAMO Alias..." -ForegroundColor White
