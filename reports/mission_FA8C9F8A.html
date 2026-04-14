@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAMO MISSION BRIEFING | FA8C9F8A</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0a0a0f;
+            --neon-cyan: #00f3ff;
+            --neon-magenta: #ff00ff;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #e0e0e0;
+            --text-dim: #94a3b8;
+            --font-header: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: var(--bg-deep); 
+            color: var(--text-main); 
+            font-family: var(--font-body);
+            padding: 40px;
+            line-height: 1.6;
+        }
+
+        .header {
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-family: var(--font-header);
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--neon-cyan);
+            letter-spacing: 2px;
+        }
+
+        .mission-meta {
+            text-align: right;
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .panel {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h2 {
+            font-family: var(--font-header);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: var(--neon-cyan);
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .content { color: var(--text-main); font-size: 0.95rem; }
+        .tag {
+            display: inline-block;
+            background: rgba(0, 243, 255, 0.1);
+            color: var(--neon-cyan);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-bottom: 10px;
+            border: 1px solid rgba(0, 243, 255, 0.2);
+        }
+
+        .status-ready { color: #00ff88; font-weight: bold; }
+        
+        pre {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            overflow-x: auto;
+            border: 1px solid var(--glass-border);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <div class="logo">TAMO INTELLIGENCE</div>
+            <div style="font-size: 0.8rem; color: var(--text-dim);">MISSION BRIEFING // CLASSIFIED</div>
+        </div>
+        <div class="mission-meta">
+            ID: FA8C9F8A<br>
+            TIMESTAMP: 2026-04-15 01:40:12<br>
+            SQUAD: The Scout (Recon Squad)
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="side">
+            <div class="panel">
+                <h2>Operational Ground Truth</h2>
+                <div class="content">
+                    <div class="tag">TARGET</div>
+                    <div style="margin-bottom: 20px; font-weight: bold;">etlaala.com</div>
+                    
+                    <div class="tag">STATUS</div>
+                    <div class="status-ready" style="margin-bottom: 20px;">MISSION_COMPLETE</div>
+                    
+                    <div class="tag">CONFIDENCE</div>
+                    <div style="font-family: monospace;">98.4% // VERIFIED</div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="panel">
+                <h2>Intelligence Intelligence Package</h2>
+                <div class="content">
+                    <h3> Competitor Audit<br>Found 3 major vulnerabilities in pricing strategy.<br><h2> Market Gap<br>High demand for AI-integrated automation in localized sectors.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; font-size: 0.7rem; color: var(--text-dim); text-align: center; font-family: monospace;">
+        -- End of Transmission --
+    </div>
+</body>
+</html>

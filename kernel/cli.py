@@ -50,6 +50,7 @@ def get_workflow_menu():
     table.add_row(Text("/audit", style="bold cyan"), Text("Brand Voice & Compliance Verification", style="dim"))
     return Panel(table, title="[bold white]Command Protocols[/]", border_style="dim")
 from kernel.mission_architect import MissionArchitect
+from kernel.mission_runner import MissionRunner
 
 console = Console()
 
@@ -69,23 +70,27 @@ def main_loop():
     # Simulation for demonstration
     cmd = console.input("[bold cyan]TAMO[/] @ [white]mission_control[/] > ")
     if cmd.startswith("/recon"):
-        console.print("[dim]> initiating_recon_squad: sentinel_active[/]")
-        console.print("[dim]> crawling_competitor_data...[/]")
+        target = cmd.split(" ")[1] if len(cmd.split(" ")) > 1 else "unknown_target"
+        console.print(f"\n[bold cyan]MISSION INITIATED:[/] [white]Targeting {target}[/]\n")
 
-        # Mock mission output
+        # Execute the mission through agent harmony
+        runner = MissionRunner()
+        mission_output = runner.run_mission(target)
+
+        # Generate the reports (MD and HTML)
         script_dir = os.path.dirname(os.path.abspath(__file__))
         project_root = os.path.dirname(script_dir)
         architect = MissionArchitect(project_root)
 
-        target = cmd.split(" ")[1] if len(cmd.split(" ")) > 1 else "unknown_target"
-        report_path = architect.generate_report(
+        md_path, html_path = architect.generate_report(
             "The Scout (Recon Squad)", 
             target, 
-            "### Competitor Audit\nFound 3 major vulnerabilities in pricing strategy.\n## Market Gap\nHigh demand for AI-integrated automation in localized sectors."
+            mission_output
         )
 
         console.print(f"\n[bold green]✔[/] MISSION COMPLETE.")
-        console.print(f"[bold white]REPORT GENERATED:[/] [cyan]{report_path}[/]")
+        console.print(f"[bold white]FEYNMAN REPORT (MD):[/] [cyan]{md_path}[/]")
+        console.print(f"[bold white]FINAL NOIR REPORT (HTML):[/] [cyan]{html_path}[/]")
 def export_screenshot():
     # Use a separate console with a fixed width for the screenshot
     export_console = Console(width=120, record=True)
