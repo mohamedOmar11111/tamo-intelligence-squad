@@ -43,7 +43,7 @@ def get_session_info():
 
 def get_workflow_menu():
     table = Table(box=None, show_header=False, padding=(0, 2))
-    table.add_row(Text("/recon", style="bold cyan"), Text("Deep Market Intelligence & Gap Analysis", style="dim"))
+    table.add_row(Text("/recon", style="bold cyan"), Text("Market Intelligence Strike & Gap Extraction", style="dim"))
     return Panel(table, title="[bold white]Active Recon Protocol[/]", border_style="dim")
 from kernel.mission_architect import MissionArchitect
 from kernel.mission_runner import MissionRunner
