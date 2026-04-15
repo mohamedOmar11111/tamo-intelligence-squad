@@ -60,4 +60,4 @@ TAMO is engineered to interface with the world's most aggressive data extraction
 Traditional market research is a reactive liability. **TAMO is a proactive strike.** By deploying a specialized chain of custody—**Sentinel, Profiler, Strategist, Inquisitor**—you capture raw market signals while your competitors are still reading old reports.
 
 ---
-Engineered by [Mohamed Omar](https://github.com/mohamedOmar11111) | The Growth Architect.
+Engineered by [Mohamed Omar](https://www.linkedin.com/in/the-growth-architect/) | The Growth Architect.
