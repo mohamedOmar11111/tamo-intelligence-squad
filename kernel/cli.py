@@ -1,7 +1,8 @@
 import os
 import sys
+import time
 
-# Add project root to sys.path
+# Add project root to sys.path to allow absolute imports
 script_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(script_dir)
 if project_root not in sys.path:
@@ -14,6 +15,17 @@ from rich.table import Table
 from rich.live import Live
 from rich.layout import Layout
 from rich import box
+
+# Import TAMO modules
+try:
+    from kernel.mission_architect import MissionArchitect
+    from kernel.mission_runner import MissionRunner
+    from kernel.tools import TAMOTools
+except ImportError:
+    # Fallback for direct execution if the above fails
+    from mission_architect import MissionArchitect
+    from mission_runner import MissionRunner
+    from tools import TAMOTools
 
 console = Console()
 
@@ -45,10 +57,6 @@ def get_workflow_menu():
     table = Table(box=None, show_header=False, padding=(0, 2))
     table.add_row(Text("/recon", style="bold cyan"), Text("Market Intelligence Strike & Gap Extraction", style="dim"))
     return Panel(table, title="[bold white]Active Recon Protocol[/]", border_style="dim")
-from kernel.mission_architect import MissionArchitect
-from kernel.mission_runner import MissionRunner
-
-console = Console()
 
 def check_credentials():
     tools = TAMOTools()
@@ -101,10 +109,8 @@ def main_loop():
         mission_output = runner.run_mission(target)
 
         # Generate the reports (MD and HTML)
-        script_dir = os.path.dirname(os.path.abspath(__file__))
-        project_root = os.path.dirname(script_dir)
         architect = MissionArchitect(project_root)
-
+        
         md_path, html_path = architect.generate_report(
             "The Scout (Recon Squad)", 
             target, 
@@ -114,6 +120,7 @@ def main_loop():
         console.print(f"\n[bold green]✔[/] MISSION COMPLETE.")
         console.print(f"[bold white]FEYNMAN REPORT (MD):[/] [cyan]{md_path}[/]")
         console.print(f"[bold white]FINAL NOIR REPORT (HTML):[/] [cyan]{html_path}[/]")
+
 def export_screenshot():
     # Use a separate console with a fixed width for the screenshot
     export_console = Console(width=120, record=True)
@@ -128,11 +135,7 @@ def export_screenshot():
     export_console.print(layout)
     export_console.print("\n[bold cyan]>[/] [white]Ready for mission input...[/]")
     
-    # Path relative to script location
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(script_dir)
     assets_dir = os.path.join(project_root, "assets")
-    
     os.makedirs(assets_dir, exist_ok=True)
     screenshot_path = os.path.join(assets_dir, "terminal_preview.svg")
     
