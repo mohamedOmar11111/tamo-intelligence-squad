@@ -29,8 +29,26 @@ class MissionArchitect:
             template = f.read()
 
         # Better markdown to HTML conversion
-        formatted_output = mission_output.replace("### ", "<h3>").replace("## ", "<h2>").replace("# ", "<h1>")
-        formatted_output = formatted_output.replace("\n", "<br>")
+        formatted_output = mission_output
+        formatted_output = formatted_output.replace("### ", "<h3>").replace("## ", "<h2>").replace("# ", "<h1>")
+        
+        # Handle lists and paragraphs
+        lines = formatted_output.split("\n")
+        processed_lines = []
+        for line in lines:
+            if line.strip().startswith("- "):
+                processed_lines.append(f"<li>{line.strip()[2:]}</li>")
+            elif line.strip() == "":
+                processed_lines.append("<br>")
+            else:
+                processed_lines.append(line)
+        
+        formatted_output = "".join(processed_lines)
+        
+        # Wrap consecutive <li> in <ul>
+        formatted_output = formatted_output.replace("</li><li>", "</li><li>") # Placeholder for logic if needed
+        # Simple wrap for now to keep it clean
+        formatted_output = f"<div class='intelligence-body'>{formatted_output}</div>"
 
         report_content = template.replace("{mission_id}", mission_id)
         report_content = report_content.replace("{timestamp}", timestamp)
