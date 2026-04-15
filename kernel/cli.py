@@ -56,7 +56,10 @@ def get_session_info():
 def get_workflow_menu():
     table = Table(box=None, show_header=False, padding=(0, 2))
     table.add_row(Text("/recon", style="bold cyan"), Text("Market Intelligence Strike & Gap Extraction", style="dim"))
-    return Panel(table, title="[bold white]Active Recon Protocol[/]", border_style="dim")
+    table.add_row(Text("/demand", style="bold cyan"), Text("Forensic Signal Research (RequestHunt)", style="dim"))
+    table.add_row(Text("/dialect", style="bold cyan"), Text("Linguistic Bridge (The Ammiya Engine)", style="dim"))
+    table.add_row(Text("/archive", style="bold cyan"), Text("Mission Sync to Shared Brain (Mem0)", style="dim"))
+    return Panel(table, title="[bold white]Active Recon Hive Protocols[/]", border_style="dim")
 
 def check_credentials():
     tools = TAMOTools()
