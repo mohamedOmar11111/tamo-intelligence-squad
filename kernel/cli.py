@@ -50,9 +50,36 @@ from kernel.mission_runner import MissionRunner
 
 console = Console()
 
+def check_credentials():
+    tools = TAMOTools()
+    if not tools.exa_key or not tools.firecrawl_key:
+        console.print(Panel(
+            Text("MISSION DELAYED: API Credentials Missing", style="bold yellow", justify="center"),
+            subtitle="[dim]Configuration Required[/]",
+            style="yellow"
+        ))
+
+        setup = console.input("[bold cyan]?[/] [white]Start automated credential setup? (y/n): [/]").lower()
+        if setup == 'y':
+            exa = console.input("[bold cyan]>[/] [white]Enter EXA_API_KEY: [/]")
+            fire = console.input("[bold cyan]>[/] [white]Enter FIRECRAWL_API_KEY: [/]")
+
+            if exa or fire:
+                tools.update_credentials(exa if exa else None, fire if fire else None)
+                console.print("[bold green]✔[/] Kernel updated. Initializing squads...\n")
+                time.sleep(1)
+                return True
+        else:
+            console.print("[dim]Proceeding in simulation mode (offline)...[/]\n")
+            time.sleep(1)
+    return False
+
 def main_loop():
     console.clear()
     console.print(get_header())
+
+    # Check for credentials before showing menu
+    check_credentials()
 
     layout = Layout()
     layout.split_row(
