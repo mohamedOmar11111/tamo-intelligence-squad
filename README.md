@@ -19,7 +19,24 @@ curl -fsSL https://raw.githubusercontent.com/mohamedOmar11111/tamo-intelligence-
 irm https://raw.githubusercontent.com/mohamedOmar11111/tamo-intelligence-squad/main/install.ps1 | iex
 ```
 
-> **MANDATE:** Installation establishes a global `tamo` alias. Restart your terminal to initialize the kernel.
+## Setup & Activation
+1.  **Initialize Environment:** Rename `.env.example` to `.env`.
+2.  **Inject Credentials:** Add your `EXA_API_KEY` and `FIRECRAWL_API_KEY`.
+3.  **Boot the Kernel:** Restart your terminal and type `tamo` to enter mission control.
+
+## Mission Command Syntax
+The TAMO Recon Squad responds to slash-commands. Below is the protocol for effective engagement:
+
+### `/recon [target_domain]`
+Deploy the full squad to dissect a specific competitor or market player.
+*   **Example:** `/recon apple.com`
+*   **Response:** Sequential execution of Sentinel (Crawl), Profiler (Analyze), Strategist (Map), and Inquisitor (Verify).
+
+### What to say to the Hive:
+When prompted for mission input inside the CLI or using the integrated skills in Claude/Gemini, use surgical, high-status directives:
+*   *"Execute a deep-penetration audit on [Domain] and identify why their pricing strategy is failing in the MENA region."*
+*   *"Map the 'Emotional Trigger Hierarchy' for [Domain] and suggest 3 aggressive entry points for a high-status alternative."*
+*   *"Run a forensic scan on [Domain] and extract the 'Pain-Point Shadows' that their current marketing ignores."*
 
 ## Tactical Protocols
 
