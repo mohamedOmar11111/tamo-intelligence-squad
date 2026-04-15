@@ -27,6 +27,18 @@ irm https://raw.githubusercontent.com/mohamedOmar11111/tamo-intelligence-squad/m
 | :--- | :--- | :--- |
 | `/recon` | **The Scout** | Deep competitor dissection and high-velocity gap analysis. |
 
+## Active Integrations: The Sensory Layer
+TAMO is engineered to interface with the world's most aggressive data extraction tools:
+*   **Exa Neural Search:** For sub-surface competitor discovery and "non-obvious" market signals.
+*   **Firecrawl Forensic Scraper:** For stripping competitor pricing, service depth, and technical stacks.
+*   **MCP Native:** Built-in compatibility for **Claude Code**, **Gemini CLI**, and any environment supporting the Model Context Protocol.
+
+## Strategic Use Cases
+1.  **Competitor Fragility Audit:** Isolate specific pricing or technical weaknesses in a market leader to engineer a superior alternative.
+2.  **Market Entry Reconnaissance:** Forensic scanning of a new vertical to map "Pain-Point Shadows" before committing resources.
+3.  **AI Sovereignty Analysis:** Map how LLMs currently perceive your sector and identify where the narrative is "up for grabs."
+4.  **Acquisition Intelligence:** Execute a digital "Red Team" audit on a target company's market positioning and growth trajectory.
+
 ## The Philosophy: Systems > Experiments
 Traditional market research is a reactive liability. **TAMO is a proactive strike.** By deploying a specialized chain of custody—**Sentinel, Profiler, Strategist, Inquisitor**—you capture raw market signals while your competitors are still reading old reports.
 
